@@ -1,0 +1,46 @@
+{
+  "name": "nextjs-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "run-p lint:script lint:style",
+    "lint:fix": "run-p lint:fix:script lint:fix:style",
+    "lint:fix:script": "next lint --fix",
+    "lint:fix:style": "stylelint --fix '**/*.scss' --ignore-path .gitignore",
+    "lint:script": "next lint",
+    "lint:style": "stylelint '**/*.scss' --ignore-path .gitignore",
+    "format": "run-p format:script format:style",
+    "format:script": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx}'",
+    "format:style": "prettier --write --ignore-path .gitignore './**/*.scss'",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@types/node": "20.1.2",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.1",
+    "microcms-js-sdk": "^2.4.0",
+    "next": "13.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sanitize.css": "^13.0.0",
+    "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "stylelint": "^15.6.1",
+    "stylelint-config-recess-order": "^4.0.0",
+    "stylelint-config-standard-scss": "^9.0.0",
+    "stylelint-prettier": "^3.0.0"
+  }
+}

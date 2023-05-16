@@ -1,0 +1,25 @@
+@use 'sass:map';
+@use '../variables' as var;
+
+// メディアクエリを設定
+// @param {String} $-range          - メディアクエリのサポート範囲（below | above | between）
+// @param {Number} $-breakpoint     - ブレークポイント（単位つき）
+// @param {Number} $-min - $-range: betweenの際のブレークポイントの下限（単位つき）
+// @param {Number} $-max - $-range: betweenの際のブレークポイントの上限（単位つき）
+// ---------------------------------------------------------------------------
+
+@mixin mq($-range: above, $-breakpoint: map.get(var.$breakpoints, mobile), $-min: null, $-max: null) {
+  @if $-range == below {
+    @media (max-width: $_breakpoint) {
+      @content;
+    }
+  } @else if $-range == above {
+    @media screen and (min-width: ($_breakpoint + 1px)) {
+      @content;
+    }
+  } @else if $-range == between {
+    @media (min-width: ($-min + 1px)) and (max-width: $-max) {
+      @content;
+    }
+  }
+}

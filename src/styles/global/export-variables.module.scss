@@ -1,0 +1,13 @@
+@use 'sass:map';
+
+// JSで使えるようにするための変数を定義
+// @see https://www.falldowngoboone.com/blog/share-variables-between-javascript-and-css/#icss
+
+// stylelint-disable
+:export {
+  breakpointMobile: map-get($breakpoints, mobile);
+  breakpointSm: map-get($breakpoints, sm);
+  breakpointMd: map-get($breakpoints, md);
+  breakpointLg: map-get($breakpoints, lg);
+  breakpointXl: map-get($breakpoints, xl);
+}
