@@ -1,0 +1,45 @@
+@use 'sass:map';
+
+/* -----------------
+  Colors
+----------------- */
+$black: #000;
+$white: #fff;
+$color-foreground: $black;
+$color-background: $white;
+
+/* -----------------
+  Fonts
+----------------- */
+$font-jp: var(--font-noto-sans-jp), sans-serif;
+$font-size-narrow: 14px;
+$font-size-wide: 16px;
+
+/* -----------------
+  Media Queries
+----------------- */
+$breakpoint-mobile: 768px;
+$breakpoints: (
+  mobile: $breakpoint-mobile,
+  sm: 320px,
+  md: $breakpoint-mobile,
+  lg: 1024px,
+  xl: 1280px,
+);
+
+/* -----------------
+  Opacity
+----------------- */
+$opacity: 0.7;
+
+/* -----------------
+  Transitions
+----------------- */
+$transition-duration: 0.4s;
+$transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+
+/* -----------------
+  Utilities
+----------------- */
+$design-width-mobile: 375px;
+$design-width-desktop: 1920px;

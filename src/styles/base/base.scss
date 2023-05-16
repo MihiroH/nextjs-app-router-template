@@ -1,0 +1,126 @@
+@use '../global' as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+dl,
+dt,
+dd,
+figure,
+figcaption,
+fieldset,
+button {
+  padding: 0;
+  margin: 0;
+}
+
+picture,
+img,
+iframe,
+embed,
+object,
+video,
+fieldset,
+button {
+  border: 0;
+}
+
+body {
+  font-size: $font-size-narrow;
+  color: $color-foreground;
+  background-color: $color-background;
+
+  @include mq {
+    font-size: $font-size-wide;
+  }
+}
+
+header,
+main,
+footer {
+  font-family: $font-jp;
+}
+
+// フッター下すペースなし
+html,
+body {
+  height: 100%;
+}
+
+li,
+dt,
+dd {
+  list-style: none;
+}
+
+figure,
+figcaption {
+  display: block;
+}
+
+em,
+strong,
+b {
+  font-style: normal;
+  font-weight: bold;
+}
+
+sub,
+sup {
+  bottom: -0.2em;
+}
+
+dfn {
+  font-style: normal;
+}
+
+iframe {
+  width: 100%;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+label {
+  cursor: pointer;
+}
+
+input {
+  &::-ms-clear {
+    visibility: hidden;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+select {
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input,
+button,
+select,
+textarea,
+[role='button'] {
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}
